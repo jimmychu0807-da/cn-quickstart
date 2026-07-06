@@ -183,6 +183,7 @@ services:
       - ${LOCALNET_DIR}/conf/console/app-user:/app/app-user/${APP_USER_PROFILE}
       - ${LOCALNET_DIR}/conf/console/sv:/app/sv/${SV_PROFILE}
       - ${LOCALNET_DIR}/docker/console/entrypoint.sh:/app/entrypoint.sh
+      - ./daml/02-ledger-programming/.daml/dist/ledger-programming-0.0.1.dar:/canton/dars/ledger-programming-0.0.1.dar
     entrypoint: /app/entrypoint.sh
     stdin_open: true
     tty: true
